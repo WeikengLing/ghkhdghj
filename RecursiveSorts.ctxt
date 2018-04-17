@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=numbers
+comment0.target=void\ mergeSort(int[])
+comment1.params=numbers\ start\ end
+comment1.target=void\ doMergeSort(int[],\ int,\ int)
+comment2.params=numbers\ start\ middle\ end
+comment2.target=void\ merge(int[],\ int,\ int,\ int)
+comment3.params=numbers
+comment3.target=void\ quickSort(int[])
+comment4.params=numbers\ start\ end
+comment4.target=void\ doQuickSort(int[],\ int,\ int)
+comment5.params=numbers\ start\ end
+comment5.target=int\ partition(int[],\ int,\ int)
+numComments=6
