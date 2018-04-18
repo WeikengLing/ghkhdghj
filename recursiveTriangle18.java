@@ -1,5 +1,3 @@
- 
-
 import javax.swing.JApplet;
 import java.awt.*;
 
@@ -17,7 +15,6 @@ public class recursiveTriangle18 extends JApplet
     */
     private int[] xPos = {720, 80, 400, 720};
     private int[] yPos = {600, 600, 40, 600};
-    
     
     //-----------------------------------------------------------------
     //  Sets up the basic applet environment.
@@ -44,25 +41,32 @@ public class recursiveTriangle18 extends JApplet
     public void Triangle(int[] xPos, int[] yPos, Graphics page)
     {
         //Find the distance between 2 points ex. - x,y & x1,y1
-        
+        int length = xPos[0] - xPos[1];
         
         //if the segment/distance is 30 or so, good length to stop
         if (length > 30)
         {
             //find the mid points of each line segment
-            
+            int xrm = (xPos[0] - xPos[2])/2;
+            int xlm = (xPos[2] - xPos[1])/2;
+            int xbm = xPos[2];
+            int ytm = (yPos[0] - yPos[2])/2;
+            int ybm = yPos[0];
             
             //make the x and y array (3 points + first point to finish triangle)
-            
+            int[] xnew = {xrm, xlm, xbm, xrm};
+            int[] ynew = {ytm, ytm, ybm, ytm};
             
             //draw the Triangle
-            //page.drawPolyline (xNew, yNew, xNew.length);
+            page.drawPolyline (xnew, ynew, xnew.length);
             
             //create x,y Array using the midpoints you calculated
-            //example
-            
-            
-            
+            int[] tx = {xrm, xlm, xPos[2], xrm};
+            int[] ty = {ytm, ytm, yPos[2], ytm};
+            int[] rx = {xPos[0], xbm, xrm, xPos[0]};
+            int[] ry = {ybm, ybm, ytm, ybm};
+            int[] lx = {xbm, xPos[1], xlm, xbm};
+            int[] ly = {ybm, ybm, ytm, ybm};
             
             // Recursive calls for each section of triangle
             
