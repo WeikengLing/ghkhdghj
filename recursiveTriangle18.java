@@ -47,10 +47,10 @@ public class recursiveTriangle18 extends JApplet
         if (length > 30)
         {
             //find the mid points of each line segment
-            int xrm = (xPos[0] - xPos[2])/2;
-            int xlm = (xPos[2] - xPos[1])/2;
+            int xrm = (xPos[0] - xPos[2])/2 + xPos[2];
+            int xlm = (xPos[2] - xPos[1])/2 + xPos[1];
             int xbm = xPos[2];
-            int ytm = (yPos[0] - yPos[2])/2;
+            int ytm = (yPos[0] - yPos[2])/2 + yPos[2];
             int ybm = yPos[0];
             
             //make the x and y array (3 points + first point to finish triangle)
@@ -69,6 +69,9 @@ public class recursiveTriangle18 extends JApplet
             int[] ly = {ybm, ybm, ytm, ybm};
             
             // Recursive calls for each section of triangle
+            Triangle(tx, ty, page);
+            Triangle(rx, ry, page);
+            Triangle(lx, ly, page);
             
             
             
