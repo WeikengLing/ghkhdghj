@@ -58,6 +58,4 @@ public class individual
             return gcd(num2, num1);
         else return gcd(num2, num1 % num2);
     }
-    
-    
 }
